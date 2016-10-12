@@ -1,0 +1,25 @@
+{
+  "name": "Tomato Reset CSS",
+  "authors": [
+    "Ming <muvoid@foxmail.com>"
+  ],
+  "description": "Tomato Reset CSS UI",
+  "main": "",
+  "keywords": [
+    "tomato ui",
+    "reset css"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "less": "^2.7.1"
+  },
+  "dependencies": {
+    "less": "^2.7.1"
+  }
+}
