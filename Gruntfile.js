@@ -46,6 +46,8 @@ module.exports = function (grunt) {
 
   //通过 load-grunt-tasks 加载任务（设定指定范围，从 package.json devDependencies ）
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
+  // time grunt 运行时间
+  require('time-grunt')(grunt);
 
   // 定义单个执行任务
   grunt.registerTask('x-sync', ['browserSync']);
