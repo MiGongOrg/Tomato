@@ -5,10 +5,13 @@ Tomato Reset CSS UI
 * [Node](https://nodejs.org)
 * [NPM](https://www.npmjs.com)
 * [Grunt](http://gruntjs.com)
-* [Bower](https://bower.io)
 
 ### 其它依赖
 * Less
 
 ### Grunt 自动化
+* load-grunt-tasks
 * grunt-browser-sync
+* grunt-contrib-clean
+* grunt-contrib-less
+* grunt-autoprefixer
