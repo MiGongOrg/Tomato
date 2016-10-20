@@ -33,16 +33,6 @@
 * {
   box-sizing: border-box;
 }
-// 滚动条样式 Webkit
-// ::-webkit-scrollbar {
-//   width: .8em;
-// }
-// ::-webkit-scrollbar-thumb {
-//   background: @tomatoColor;
-// }
-// ::-webkit-scrollbar-track {
-//   background: @whiteColor;
-// }
 body, ul, ol, h1, h2, h3, h4, h5, h6, p, th, td, dl, dt, dd, form, fieldset, legend, table, input, button, select, textarea, img, div, pre, code, blockquote {
   margin: 0;
   padding: 0;
@@ -127,9 +117,11 @@ textarea {
   color: @tomatoColor;
   display: block;
   width: 100%;
+  margin-bottom: 10px;
 }
 // checkbox and radio
 .checkbox, .radio {
+  margin-bottom: 10px;
   input {
     display: none;
   }
@@ -145,7 +137,7 @@ textarea {
     border: 2px solid @tomatoColor;
     cursor: pointer;
     vertical-align: text-bottom;
-    margin: 0 5px;
+    margin: 0 5px 0 0;
     position: relative;
   }
   input[type="radio"] + label:after {
@@ -172,8 +164,8 @@ textarea {
     border: 2px solid @tomatoColor;
     background-color: @whiteColor;
     cursor: pointer;
-    vertical-align: middle;
-    margin: 0 5px;
+    vertical-align: text-bottom;
+    margin: 0 5px 0 0;
   }
   input[type="checkbox"] + label:after {
     position: absolute;
@@ -242,10 +234,33 @@ input[type="button"][disabled], input[type="reset"][disabled], input[type="submi
   #disabled > .btn;
 }
 code {
+  position: relative;
   color: @whiteColor;
   background-color: @tomatoColor;
-  padding: 2px 5px;
+  padding: 0 5px;
   margin: 0 5px;
+  border: 1px solid @tomatoColor;
+  vertical-align: text-top;
+}
+code:before, code:after{
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+}
+code:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right: 5px solid transparent;
+  border-top: 5px solid @whiteColor;
+}
+code:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid @whiteColor;
 }
 pre {
   color: @whiteColor;
@@ -303,8 +318,26 @@ table {
     clear: both;
   }
 }
+// disabled a标签按钮与button 特殊样式
+.ban {
+  position: relative;
+  &:after {
+    content: '禁';
+    width: 25px;
+    height: 25px;
+    border: 2px solid @tomatoColor;
+    border-radius: 50%;
+    background-color: @tomatoColor;
+    box-shadow: 0 0 0 2px @whiteColor inset;
+    color: @whiteColor;
+    line-height: 25px;
+    position: absolute;
+    top: -12.5px;
+    right: -12.5px;
+  }
+}
 // in line
-.inline {
+.inline, a.inline, input[type="button"].inline, input[type="submit"].inline, input[type="reset"].inline {
   display: inline-block;
   width: auto;
   vertical-align: middle;

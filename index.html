@@ -7,15 +7,7 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li>首页</li>
-        <li><a href="#h">标题</a></li>
-        <li><a href="#form">表单</a></li>
-        <li>导航</li>
-        <li>导航</li>
-      </ul>
-    </nav>
+    <nav>Tomato</nav>
   </header>
   <div class="container">
     <div id="h">
@@ -26,56 +18,94 @@
       <h4>h4 Tomato</h4>
       <h5>h5 Tomato</h5>
       <h6>h6 Tomato</h6>
+      <h5>实例：</h5>
+      <pre>&lt;h1&gt;h1 Tomato&lt;/h1&gt;</pre>
     </div>
-    <div id="form">
+    <div>
       <h3>表单</h3>
-      <input type="text" name="" placeholder="用户名">
-      <input type="password" name="" placeholder="密码">
-      <button>提交</button>
-      <button>button 按钮</button>
-      <a class="btn" href="javascript:;">a 标签按钮</a>
-      <input type="button" value="input 按钮">
-      <input type="reset" name="" value="reset 按钮">
-      <input type="submit" name="" value="submit 按钮">
-      <h4>内联表单</h4>
-      <input class="inline" type="text" name="" placeholder="Email">
-      <button class="inline">提交</button>
-      <h4>Disabled</h4>
-      <fieldset disabled>
-        <legend>fieldset disabled</legend>
-        <input type="text" name="" value="input text disabled">
-        <input type="button" name="" value="input disabled 按钮">
-        <input type="reset" name="" value="input reset 按钮">
-        <input type="submit" name="" value="submit 按钮">
-        <button>button disabled 按钮</button>
-        <a href="javascript:;" class="btn">a disabled 按钮</a>
-      </fieldset>
-      <input type="text" name="" value="input text disabled" disabled>
-      <input type="button" name="" value="input disabled 按钮" disabled>
-      <input type="reset" name="" value="input reset 按钮" disabled>
-      <input type="submit" name="" value="submit 按钮" disabled>
-      <button disabled>button disabled 按钮</button>
-      <a href="javascript:;" class="btn disabled">a disabled 按钮</a>
-      <hr>
+      <input type="text" placeholder="用户名">
+      <input type="password" placeholder="密码">
       <div class="checkbox">
         <input id="hobbyOne" type="checkbox" checked>
         <label for="hobbyOne"></label>跑步
         <input id="hobbyTwo" type="checkbox">
         <label for="hobbyTwo"></label>游泳
-        <input id="hobbyThree" type="checkbox" disabled>
-        <label for="hobbyThree"></label>跑步
       </div>
-      <hr>
       <div class="radio">
         <input id="sexOne" type="radio" name="sex" checked>
         <label for="sexOne"></label>男
         <input id="sexTwo" type="radio" name="sex">
         <label for="sexTwo"></label>女
-        <input id="sexThree" type="radio" name="sex" disabled>
-        <label for="sexThree"></label>其它
       </div>
-      <hr>
       <textarea rows="3"></textarea>
+      <button>提交</button>
+      <h5>实例：<small>checkbox 和 radio 的<code>input</code>必须在<code>label</code>之前</small></h5>
+      <pre>&lt;input type="text" placeholder="用户名"&gt;
+&lt;input type="text" placeholder="密码"&gt;
+
+&lt;div class="checkbox"&gt;
+  &lt;input id="running" type="checkbox"&gt;
+  &lt;label for="running"&gt;跑步&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="radio"&gt;
+  &lt;input id="men" type="radio"&gt;
+  &lt;label for="men"&gt;男&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;textarea rows="3"&gt;&lt;/textarea&gt;
+
+&lt;button&gt;提交&lt;/button&gt;</pre>
+      <h4>内联表单</h4>
+      <input class="inline" type="text" name="" placeholder="Email">
+      <button class="inline">提交</button>
+      <h5>实例：<small>添加<code>class="inline</code>类</small></h5>
+      <pre>&lt;input class="inline" type="text" placeholder="Email"&gt;
+&lt;button class="inline"&gt;提交&lt;/button&gt;</pre>
+      <h4>禁用表单</h4>
+      <input class="inline" type="text" name="" value="被禁用的 input" disabled>
+      <input  class="inline" type="button" name="" value="按钮" disabled>
+      <a href="javascript:;" class="btn inline disabled">a disabled 按钮</a>
+      <button class="inline ban" disabled>特殊样式按钮</button>
+      <h5>实例：<small>添加<code>disabled</code></small></h5>
+      <pre>&lt;input type="text" disabled&gt;
+&lt;input value="按钮" disabled&gt;
+&lt;button class="ban" disabled&gt;特殊样式&lt;/button&gt;</pre>
+      <blockquote>特殊禁用样式按钮添加<code>class="ban"</code>类，暂时只支持<code>buttond</code>和<code>a</code>标签使用</blockquote>
+      <h4>禁用一组表单</h4>
+      <fieldset disabled>
+        <legend>fieldset disabled</legend>
+        <input type="text" name="" value="input text disabled">
+        <input type="button" name="" value="input disabled 按钮">
+      </fieldset>
+      <h5>实例：<small>给 fieldset 添加<code>disabled</code>可以禁用 fieldset 内的所有表单</small></h5>
+      <pre>&lt;fieldset disabled&gt;
+  &lt;input type="text"&gt;
+  &lt;input value="按钮"&gt;
+&lt;/fieldset&gt;</pre>
+      <h4>禁用特殊用例说明</h4>
+      <div class="checkbox inline">
+        <input id="checkboxDisabled" type="checkbox" disabled>
+        <label for="checkboxDisabled"></label>爱好
+      </div>
+      <div class="radio inline">
+        <input id="radioDisabled" type="radio" name="sex" disabled>
+        <label for="radioDisabled"></label>性别
+      </div>
+      <a href="javascript:;" class="btn inline disabled">a标签按钮</a>
+      <pre>&lt;div class="checkbox"&gt;
+  &lt;input id="hobby" type="checkbox" disabled&gt;
+  &lt;label for="hobby"&gt;爱好&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class="radio"&gt;
+  &lt;input id="sex" type="radio" disabled&gt;
+  &lt;label for="sex"&gt;性别&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;a class="disabled" href="javascript:;"&gt;
+</pre>
+      <blockquote>因 checkbox 和 radio 是由<code>label</code>实现的模拟效果，所有禁用input即可。如果是a标签用做按钮，可以添加<code>class="disabled"</code>类实现禁用样式，但未真正禁用a标签的默认功能。</blockquote>
     </div>
     <div>
       <h3>文本</h3>
@@ -84,12 +114,22 @@
       <p>del 标签：<del>被删的文本是这样的</del></p>
       <p>s 标签：<s>无用文本是这样的</s></p>
       <p>u 标签：<u>带下划线的文本</u></p>
+      <pre>&lt;p&gt;在p标签中包涵&lt;a href="javascript;:"&gt;a 标签&lt;/a&gt;&lt;/p&gt;</pre>
+      <blockquote><code>del</code>标签，<code>s</code>和<code>u</code>标签，暂时使用默认样式</blockquote>
     </div>
     <div>
       <h3>内联代码、代码块、引用</h3>
       文字中夹杂的代码片段<code>console.log('code')</code>是这样的！
       <pre>&lt;p&gt;这是一段代码块...&lt;/p&gt;</pre>
-      <blockquote>这是一段引用内容</blockquote>
+      <blockquote>这是一段引用..</blockquote>
+      <h5>实例：</h5>
+      <pre>// 内联代码
+&lt;code&gt;console.log('code')&lt;/code&gt;
+// 代码块
+&lt;pre&gt;这是一段代码块...&lt;/pre&gt;
+// 引用
+&lt;blockquote&gt;这是一段引用...&lt;/blockquote&gt;
+</pre>
     </div>
     <div>
       <h3>表格</h3>
@@ -120,6 +160,16 @@
         </tbody>
         <tfoot></tfoot>
       </table>
+      <h5>实例：</h5>
+      <pre>&lt;table&gt;
+  &lt;thead&gt;
+    ...
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    ...
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;...&lt;/tfoot&gt;
+&lt;/table&gt;</pre>
     </div>
     <div>
       <h3>符号</h3>
@@ -141,6 +191,13 @@
         CSS：
         <span class="triangle"></span>
       </p>
+      <h5>实例：<small>通用符号是浏览器预留的字符实体</small></h5>
+      <pre>// 字符实体
+注册商标：&amp;reg; 版权：&amp;copy;
+// 定制关闭按钮
+&lt;span class="times"&gt;&amp;times;&lt;/span&gt;
+// CSS 倒三角
+&lt;span class="triangle"&gt;&lt;/span&gt;</pre>
     </div>
   </div>
   <footer>Design By Ming</footer>
