@@ -6,29 +6,29 @@
   <title>Tomato Reset CSS UI</title>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li>首页</li>
+        <li><a href="#h">标题</a></li>
+        <li><a href="#form">表单</a></li>
+        <li>导航</li>
+        <li>导航</li>
+      </ul>
+    </nav>
+  </header>
   <div class="container">
-    <header>
-      <nav>
-        <ul>
-          <li>首页</li>
-          <li>导航</li>
-          <li>导航</li>
-          <li>导航</li>
-          <li>导航</li>
-        </ul>
-      </nav>
-    </header>
-    <fieldset>
-      <legend>标题</legend>
-      <h1>H1 标签</h1>
-      <h2>H2 标签</h2>
-      <h3>H3 标签</h3>
-      <h4>H4 标签</h4>
-      <h5>H5 标签</h5>
-      <h6>H6 标签</h6>
-    </fieldset>
-    <fieldset>
-      <legend>表单</legend>
+    <div id="h">
+      <h3>标题</h3>
+      <h1>h1 Tomato</h1>
+      <h2>h2 Tomato</h2>
+      <h3>h3 Tomato</h3>
+      <h4>h4 Tomato</h4>
+      <h5>h5 Tomato</h5>
+      <h6>h6 Tomato</h6>
+    </div>
+    <div id="form">
+      <h3>表单</h3>
       <input type="text" name="" placeholder="用户名">
       <input type="password" name="" placeholder="密码">
       <button>提交</button>
@@ -48,14 +48,14 @@
         <input type="reset" name="" value="input reset 按钮">
         <input type="submit" name="" value="submit 按钮">
         <button>button disabled 按钮</button>
-        <a href="#" class="btn">a disabled 按钮</a>
+        <a href="javascript:;" class="btn">a disabled 按钮</a>
       </fieldset>
       <input type="text" name="" value="input text disabled" disabled>
       <input type="button" name="" value="input disabled 按钮" disabled>
       <input type="reset" name="" value="input reset 按钮" disabled>
       <input type="submit" name="" value="submit 按钮" disabled>
       <button disabled>button disabled 按钮</button>
-      <a href="#" class="btn disabled">a disabled 按钮</a>
+      <a href="javascript:;" class="btn disabled">a disabled 按钮</a>
       <hr>
       <div class="checkbox">
         <input id="hobbyOne" type="checkbox" checked>
@@ -76,23 +76,23 @@
       </div>
       <hr>
       <textarea rows="3"></textarea>
-    </fieldset>
-    <fieldset>
-      <legend>文本</legend>
+    </div>
+    <div>
+      <h3>文本</h3>
       <p>p 标签：这是一个 p 标签，段落文本</p>
-      <p>a 标签：在 p 标签段落文本里面包含了一个<a href="#">a 标签，超链接文本</a>的样式效果</p>
+      <p>a 标签：在 p 标签段落文本里面包含了一个<a href="javascript:;">a 标签，超链接文本</a>的样式效果</p>
       <p>del 标签：<del>被删的文本是这样的</del></p>
       <p>s 标签：<s>无用文本是这样的</s></p>
       <p>u 标签：<u>带下划线的文本</u></p>
-    </fieldset>
-    <fieldset>
-      <legend>内联代码、代码块、引用</legend>
+    </div>
+    <div>
+      <h3>内联代码、代码块、引用</h3>
       文字中夹杂的代码片段<code>console.log('code')</code>是这样的！
       <pre>&lt;p&gt;这是一段代码块...&lt;/p&gt;</pre>
       <blockquote>这是一段引用内容</blockquote>
-    </fieldset>
-    <fieldset>
-      <legend>表格</legend>
+    </div>
+    <div>
+      <h3>表格</h3>
       <table>
         <thead>
           <tr>
@@ -120,9 +120,9 @@
         </tbody>
         <tfoot></tfoot>
       </table>
-    </fieldset>
-    <fieldset>
-      <legend>符号</legend>
+    </div>
+    <div>
+      <h3>符号</h3>
       <p> 
         通用：
         <span class="character">&times;</span>
@@ -141,10 +141,10 @@
         CSS：
         <span class="triangle"></span>
       </p>
-    </fieldset>
-
-    <footer></footer>
+    </div>
   </div>
+  <footer>Design By Ming</footer>
+  <link rel="stylesheet/less" type="text/css" href="src/css/tomato.less">
   <link rel="stylesheet/less" type="text/css" href="src/css/style.less">
   <script type="text/javascript" src="bower_components/less/dist/less.js"></script>
 </body>

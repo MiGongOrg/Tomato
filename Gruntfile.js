@@ -25,7 +25,7 @@ module.exports = function (grunt) {
           compress: true
         },
         files: {
-          'dist/css/style.min.css': 'src/css/style.less'
+          'dist/css/tomato.min.css': 'src/css/tomato.less'
         }
       }
     },
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
       css: {
         //目标文件
         src: [
-          'dist/css/style.min.css'
+          'dist/css/tomato.min.css'
         ]
       }
     }
@@ -46,7 +46,7 @@ module.exports = function (grunt) {
 
   //通过 load-grunt-tasks 加载任务（设定指定范围，从 package.json devDependencies ）
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
-  // time grunt 运行时间
+  // time grunt 任务运行所耗时间
   require('time-grunt')(grunt);
 
   // 定义单个执行任务
