@@ -16,3 +16,12 @@ Tomato Reset CSS UI
 * grunt-contrib-clean
 * grunt-contrib-less
 * grunt-autoprefixer
+
+### 使用方法
+
+```
+// 引入 Tomato CSS 文件
+<link rel="stylesheet" type="text/css" href="dist/css/tomato.min.css">
+// 你的 CSS 文件
+<link rel="stylesheet" type="text/css" href="yourCss.css">
+```
