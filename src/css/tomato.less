@@ -29,6 +29,40 @@
   }
 }
 
+// Css 三角，可通过变量改变三角形的大小颜色。
+#triangle {
+  .default() {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+  }
+  .top(@size: 4px, @color: @tomatoColor, @transparent: transparent) {
+    .default();
+    border-left: @size solid @transparent;
+    border-right: @size solid @transparent;
+    border-bottom: @size solid @color;
+  }
+  .right(@size: 4px, @color: @tomatoColor, @transparent: transparent) {
+    .default();
+    border-left: @size solid @color;
+    border-top: @size solid @transparent;
+    border-bottom: @size solid @transparent;
+  }
+  .bottom(@size: 4px, @color: @tomatoColor, @transparent: transparent) {
+    .default();
+    border-left: @size solid @transparent;
+    border-right: @size solid @transparent;
+    border-top: @size solid @color;
+  }
+  .left(@size: 4px, @color: @tomatoColor, @transparent: transparent) {
+    .default();
+    border-right: @size solid @color;
+    border-top: @size solid @transparent;
+    border-bottom: @size solid @transparent;
+  }
+}
+
 // CSS Reset
 * {
   box-sizing: border-box;
@@ -215,7 +249,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"], a.btn {
   }
 }
 // button hover & input focus
-input:focus, textarea:focus {
+input:focus, textarea:focus, button:focus {
   box-shadow: 3px 3px 0px 0px @tomatoColor;
   outline: 0;
 }
@@ -362,13 +396,16 @@ table {
     text-shadow: 0 0 3px @grayColorC;
   }
 }
-// Css 字符（倒三角）
-.triangle {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  vertical-align: middle;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4px solid @tomatoColor;
+// Css 字符（三角，上右下左），可通过变量改变三角形的大小颜色。
+.triangleT {
+  #triangle > .top;
+}
+.triangleR {
+  #triangle > .right;
+}
+.triangleB {
+  #triangle > .bottom;  
+}
+.triangleL {
+  #triangle > .left;
 }
